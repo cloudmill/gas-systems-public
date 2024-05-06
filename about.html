@@ -5,7 +5,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>ui</title>
+    <title>about</title>
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta content="ie=edge" http-equiv="x-ua-compatible">
     <link href="https://vitejs.dev/logo.svg" rel="icon" type="image/x-icon">
@@ -15,7 +15,7 @@
   <body data-barba="wrapper">
     <div class="test"></div>
     <div class="wrapper">
-      <header class="header">
+      <header class="header header_white">
         <div class="header__inner"> <a class="header__logo" href="./home">
             <svg xmlns="http://www.w3.org/2000/svg" width="221" height="55" viewBox="0 0 221 55" fill="none">
               <path fill-rule="evenodd" clip-rule="evenodd" id="logo-text-1" d="M58.4608 20.6938C58.4233 18.1944 58.6492 12.3849 50.2472 12.3849C44.6712 12.3849 41.9585 14.7493 41.9585 19.0725C41.9585 20.4234 42.4 21.8394 43.3146 22.9565C45.4143 25.5209 48.853 26.9195 51.6413 28.7995C52.9605 29.6891 53.7513 30.6569 53.7513 32.1433C53.7513 34.0685 52.6964 35.1155 50.4734 35.1155C47.8738 35.1155 47.1576 33.3273 47.1576 30.8597V29.3735H41.883V31.2312C41.883 35.7561 44.1438 38.9375 50.4734 38.9375C55.6351 38.9375 59.1768 36.4325 59.1768 31.6365C59.1768 29.4414 58.6129 27.9192 56.8031 26.334C55.3363 25.0491 52.1283 23.162 50.3981 22.1797C48.7384 21.2376 47.384 20.4908 47.384 18.5657C47.384 16.8432 48.5144 16.2015 50.285 16.2015C53.186 16.2015 53.4121 18.4306 53.3746 20.6938H58.4608ZM25.674 38.3241L27.0681 31.9066H33.247L34.641 38.3241H40.2926L33.8876 12.993H26.7666L20.0226 38.3241H25.674ZM29.4795 20.9976C29.7393 19.8148 29.8806 18.669 30.007 17.4849C30.0677 16.9134 30.1201 16.3367 30.195 15.7963H30.2705C30.3458 16.3367 30.3981 16.9134 30.4591 17.4849C30.5852 18.669 30.7504 19.8118 30.9866 20.9976L32.4182 28.1917H27.897L29.4795 20.9976ZM5.42544 22.5849C5.42544 20.6262 5.08751 16.1297 9.23069 16.2015C12.812 16.2638 12.9984 18.3631 13.0737 20.93H18.3484C18.3106 19.9169 18.3589 18.8667 18.0847 17.8565C16.8908 13.464 13.7502 12.3959 9.23069 12.3849C0.792267 12.3645 0 16.7489 0 23.2V28.1217C0 34.5729 0.793099 38.9535 9.23069 38.9375C18.2797 38.9205 18.3512 35.0397 18.3458 29.7726C18.3458 29.7514 18.3473 25.3059 18.3481 25.2821H9.45047V28.9902H13.0719C13.0717 29.8114 13.0717 30.4464 13.0717 30.4526C12.996 32.9906 12.7834 35.0597 9.23038 35.1209C5.08719 35.1925 5.42512 30.6966 5.42512 28.7375" fill="white"></path>
@@ -145,170 +145,74 @@
       </header>
       <div class="modal-block">
       </div>
-      <div class="content" data-barba="container" data-barba-namespace="ui">
+      <div class="content" data-barba="container" data-barba-namespace="about">
         <main>
-          <div class="container"><br><br><br><br><br><br>
-            <h1 class="title-205">класс title-205</h1>
-            <h1 class="title-104">класс title-104</h1>
-            <h1 class="title-76">класс title-76</h1>
-            <h1 class="title-64">класс title-64</h1>
-            <h1 class="title-40">класс title-40</h1>
-            <h2 class="title-32">класс title-32</h2><br><br>
-            <p class="text-24">Текст класс text-24</p>
-            <p class="text-20">Текст класс text-20</p>
-            <p class="description">Текст класс description</p><br><br>
-            <p class="text-20">Маркерованный список миксин ul-ui</p><br>
-            <ul class="ul-ui">
-              <li><span> </span>
-                <p>options-1</p>
-              </li>
-              <li><span> </span>
-                <p>options-2</p>
-              </li>
-              <li><span> </span>
-                <p>options-3</p>
-              </li>
-              <li><span> </span>
-                <p>options-4</p>
-              </li>
-              <li><span> </span>
-                <p>options-5</p>
-              </li>
-            </ul><br><br>
-            <p class="text-20">Нумерованный список миксин ol-ui</p><br>
-            <ol class="ol-ui">
-              <li><span>01</span>
-                <p>options-1</p>
-              </li>
-              <li><span>02</span>
-                <p>options-2</p>
-              </li>
-              <li><span>03</span>
-                <p>options-3</p>
-              </li>
-              <li><span>04</span>
-                <p>options-4</p>
-              </li>
-              <li><span>05</span>
-                <p>options-5</p>
-              </li>
-            </ol><br><br>
-            <p class="text-20">Хлебные крошки миксин breadcrumbs</p><br>
-            <div class="breadcrumbs"><a href="/">Ссылка</a><span class="breadcrumbs__separator"> </span>
-              <p>Активная</p><span class="breadcrumbs__separator"> </span><a href="/">Ссылка</a><span class="breadcrumbs__separator"> </span><a href="/">Ссылка</a>
-            </div><br>
-            <p class="text-20">Хлебные крошки black breadcrumbs</p><br>
-            <div class="div" style="background-color: yellow; padding: 20px;">
-              <div class="breadcrumbs breadcrumbs_black"><a href="/">Ссылка</a><span class="breadcrumbs__separator"> </span>
-                <p>Активная</p><span class="breadcrumbs__separator"> </span><a href="/">Ссылка</a><span class="breadcrumbs__separator"> </span><a href="/">Ссылка</a>
+          <section class="home-hero">
+            <div class="home-hero__inner"> 
+              <div class="home-hero__background"> 
+                <picture class="picture">
+                  <source class="lazyload" type="image/webp" srcset="webp/home-hero-mob.webp " alt="home-hero.jpg" media="(max-width: 768px)"/>
+                  <source class="lazyload" srcset="images/home-hero-mob.jpg " alt="home-hero.jpg" media="(max-width: 768px)"/>
+                  <source class="lazyload" srcset="images/home-hero-mob.png " alt="home-hero.jpg" media="(max-width: 768px)"/>
+                  <source class="lazyload" type="image/webp" srcset="webp/home-hero.webp " alt="home-hero.jpg"/>
+                  <source class="lazyload" srcset="images/home-hero.jpg " alt="home-hero.jpg"/>
+                  <source class="lazyload" srcset="images/home-hero.png " alt="home-hero.jpg"/><img class="picture__img lazyload" data-src="images/home-hero.jpg" alt="home-hero.jpg"/>
+                </picture>
               </div>
-            </div><br><br>
-            <p class="text-20">документ миксин document-ui</p><br>
-            <div class="document-ui">
-              <div class="document-ui__inner"> 
-                <div class="document-ui__title">
-                  <p class="title-32">Опросный лист для подбора ультразвукового расходомера</p>
-                </div>
-                <div class="document-ui__content"> 
-                  <div class="document-ui__content-left">
-                    <p>DOCX</p>
-                    <p>406 КБ</p>
-                  </div>
-                  <div class="document-ui__content-right">
-                    <div class="button-download"> 
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path d="M18.1399 10.429L12.0699 16.499L5.99989 10.429" stroke="#474E5A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"></path>
-                        <path d="M12.1653 3L12.1653 11.5" stroke="#474E5A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square" stroke-linejoin="round"></path>
-                        <path d="M1 23H23" stroke="#474E5A" stroke-width="2"></path>
-                      </svg>
-                    </div>
+              <div class="home-hero__block">
+                <div class="home-hero__breadcrumbs">
+                  <div class="breadcrumbs"><a href="/">Главная</a><span class="breadcrumbs__separator"> </span>
+                    <p>О компании</p>
                   </div>
                 </div>
+                <h1 class="title-104 home-hero__title wide">традиции российского энергетического инжиниринга</h1>
               </div>
-            </div><br><br>
-            <p class="text-20">Аккордеон миксин accordion-ui</p><br>
-            <div class="accordion-ui">
-              <div class="accordion-ui__item">
-                <div class="accordion-ui__header">
-                  <p class="title-32">Аккордеон</p>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M13 5V4H11V5V10V11H10H5H4V13H5H10H11V14V19V20H13V19V14V13H14H19H20V11H19H14H13V10V5ZM13 11V13H11V11H13Z" fill="#474E5A"></path>
-                  </svg>
+              <div class="home-hero__note">Являемся российским производителем надежных газоразделительных систем. Основное направление деятельности нашей компании — это полный цикл проектирования, изготовления и обслуживания оборудования для подготовки и очистки газа от примесей.</div>
+            </div>
+          </section>
+          <section class="home-about">
+            <div class="home-about__inner"> 
+              <div class="home-about__breadcrumb"> <span> </span>
+                <p class="text-24"> достижения</p>
+              </div>
+              <div class="achievements">
+                <div class="achievements-card">
+                  <h2 class="title-205 achievements-card__counter">30+</h2>
+                  <p class="text-24 achievements-card__text">
+                     комплектных<br/>компрессорных установок</p>
                 </div>
-                <div class="accordion-ui__content">
-                  <ul class="ul-ui">
-                    <li><span> </span>
-                      <p>options-1</p>
-                    </li>
-                    <li><span> </span>
-                      <p>options-2</p>
-                    </li>
-                    <li><span> </span>
-                      <p>options-3</p>
-                    </li>
-                    <li><span> </span>
-                      <p>options-4</p>
-                    </li>
-                    <li><span> </span>
-                      <p>options-5</p>
-                    </li>
-                  </ul>
+                <div class="achievements-card">
+                  <h2 class="title-205 achievements-card__counter">2</h2>
+                  <p class="text-24 achievements-card__text">установки комплексной <br/>подготовки газа</p>
+                </div>
+                <div class="achievements-card">
+                  <h2 class="title-205 achievements-card__counter">50+</h2>
+                  <p class="text-24 achievements-card__text">пунктов подготовки газа <br class="desktop"/>и газораспределитель<br class="mobile"/>ных станций</p>
+                </div>
+                <div class="decisions__line desktop"></div>
+                <div class="achievements-card">
+                  <h2 class="title-205 achievements-card__counter">15+</h2>
+                  <p class="text-24 achievements-card__text">лет создаем традиции российского энергетического инжиниринга</p>
+                </div>
+                <div class="decisions__line tablet"></div>
+                <div class="achievements-card">
+                  <div class="achievements-card__title">
+                    <h2 class="title-76">Задаем тренды технических решений&#32;</h2><span class="title-76 grey">на базе передовых технологий</span>
+                  </div>
+                  <p class="text-24">Более 15 лет сотрудники компании инициировали и воплощали в жизнь не только проекты по поставкам технологичного оборудования и проектированию, а формировали технические решения на базе самых современных и передовых технологий по каждому из предлагаемых направлений.</p>
                 </div>
               </div>
-            </div><br><br>
-            <p class="text-20"> Вкладка миксин tab-ui</p><br>
-            <div class="tab-ui tab-ui_yellow">
-              <p>Вкладка желтая</p>
-            </div><br>
-            <div class="tab-ui tab-ui_black">
-              <p>Вкладка черная</p>
-            </div><br>
-            <div class="div" style="background-color: #474e5a; padding: 20px;">
-              <div class="tab-ui tab-ui_white">
-                <p>Вкладка белая</p>
-              </div>
-            </div><br><br>
-            <p class="text-20">галерея tab-ui</p><br><a data-fancybox="gallery" href="images/test.jpeg">
-              <picture class="picture">
-                <source class="lazyload" type="image/webp" srcset="webp/test.webp " alt="test.jpeg"/>
-                <source class="lazyload" srcset="images/test.jpg " alt="test.jpeg"/>
-                <source class="lazyload" srcset="images/test.png " alt="test.jpeg"/><img class="picture__img lazyload" data-src="images/test.jpeg" alt="test.jpeg"/>
-              </picture></a><br><br>
-            <p class="text-20">кнопка миксин button-ui</p><br><a class="button-ui" data-btn="data-btn" href="/">
-              <p>Кнопка</p>
+            </div>
+          </section>
+          <div class="about-bottom">
+            <h2 class="title-104">Реализованные проекты</h2><a class="button-ui" data-btn="data-btn" href="/">
+              <p>далее</p>
               <div class="button-ui__arrow"> 
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                   <path d="M12.4297 5.93005L18.4997 12.0001L12.4297 18.0701" stroke="#474E5A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"></path>
                   <path d="M5 12L13.5 12" stroke="#474E5A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square" stroke-linejoin="round"></path>
                 </svg>
-              </div></a><br><br>
-            <button class="button-circle button-circle_right ">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <path d="M10.4297 5.92969L16.4997 11.9997L10.4297 18.0697" stroke="#474E5A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"></path>
-              </svg>
-            </button>
-            <button class="button-circle button-circle_left ">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <path d="M10.4297 5.92969L16.4997 11.9997L10.4297 18.0697" stroke="#474E5A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"></path>
-              </svg>
-            </button>
-            <div class="div" style="background-color: #474e5a; padding: 20px; display:flex; gap:10px;">
-              <button class="button-circle button-circle_left button-circle_black">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                  <path d="M10.4297 5.92969L16.4997 11.9997L10.4297 18.0697" stroke="#474E5A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"></path>
-                </svg>
-              </button>
-              <button class="button-circle button-circle_right button-circle_black">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                  <path d="M10.4297 5.92969L16.4997 11.9997L10.4297 18.0697" stroke="#474E5A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"></path>
-                </svg>
-              </button>
-            </div><br><br><br><br><br><br><br>
-            <p class="text-20">кнопки миксин button-square ( + логика переключателей - в toggle-buttons)</p><br>
-            <div class="toggle-buttons" style="background-color: #474e5a; padding: 20px; display:flex; gap:8px;">
-              <button class="button-square active active" data-toggle-button="commercial">Коммерческий учет</button>
-              <button class="button-square" data-toggle-button="technological">Технологический учет</button>
-            </div><br><br><br><br><br><br><br><br>
+              </div></a>
           </div>
         </main>
       </div>
