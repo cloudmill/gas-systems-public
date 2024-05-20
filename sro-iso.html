@@ -1,0 +1,477 @@
+
+<!--Для добавления мобильной версии картинки добавляем вторым параметром true-->
+<!--Например +picture('image.jpg', 'true')-->
+<!--Миксин будет искать картинку с названием image-mob.jpg (тоесть вторая картинка должна иметь такое же название как и основная, только с добавлением -mob.png/jpg и тд)--><!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>sro-iso</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <link href="https://vitejs.dev/logo.svg" rel="icon" type="image/x-icon">
+    <script type="module" crossorigin src="assets/index-0f84ce39.js"></script>
+    <link rel="stylesheet" href="styles/index.css">
+  </head>
+  <body data-barba="wrapper">
+    <div class="test"></div>
+    <div class="wrapper">
+      <header class="header header_white">
+        <div class="header__inner"> <a class="header__logo" href="./home">
+            <svg xmlns="http://www.w3.org/2000/svg" width="221" height="55" viewBox="0 0 221 55" fill="none">
+              <path fill-rule="evenodd" clip-rule="evenodd" id="logo-text-1" d="M58.4608 20.6938C58.4233 18.1944 58.6492 12.3849 50.2472 12.3849C44.6712 12.3849 41.9585 14.7493 41.9585 19.0725C41.9585 20.4234 42.4 21.8394 43.3146 22.9565C45.4143 25.5209 48.853 26.9195 51.6413 28.7995C52.9605 29.6891 53.7513 30.6569 53.7513 32.1433C53.7513 34.0685 52.6964 35.1155 50.4734 35.1155C47.8738 35.1155 47.1576 33.3273 47.1576 30.8597V29.3735H41.883V31.2312C41.883 35.7561 44.1438 38.9375 50.4734 38.9375C55.6351 38.9375 59.1768 36.4325 59.1768 31.6365C59.1768 29.4414 58.6129 27.9192 56.8031 26.334C55.3363 25.0491 52.1283 23.162 50.3981 22.1797C48.7384 21.2376 47.384 20.4908 47.384 18.5657C47.384 16.8432 48.5144 16.2015 50.285 16.2015C53.186 16.2015 53.4121 18.4306 53.3746 20.6938H58.4608ZM25.674 38.3241L27.0681 31.9066H33.247L34.641 38.3241H40.2926L33.8876 12.993H26.7666L20.0226 38.3241H25.674ZM29.4795 20.9976C29.7393 19.8148 29.8806 18.669 30.007 17.4849C30.0677 16.9134 30.1201 16.3367 30.195 15.7963H30.2705C30.3458 16.3367 30.3981 16.9134 30.4591 17.4849C30.5852 18.669 30.7504 19.8118 30.9866 20.9976L32.4182 28.1917H27.897L29.4795 20.9976ZM5.42544 22.5849C5.42544 20.6262 5.08751 16.1297 9.23069 16.2015C12.812 16.2638 12.9984 18.3631 13.0737 20.93H18.3484C18.3106 19.9169 18.3589 18.8667 18.0847 17.8565C16.8908 13.464 13.7502 12.3959 9.23069 12.3849C0.792267 12.3645 0 16.7489 0 23.2V28.1217C0 34.5729 0.793099 38.9535 9.23069 38.9375C18.2797 38.9205 18.3512 35.0397 18.3458 29.7726C18.3458 29.7514 18.3473 25.3059 18.3481 25.2821H9.45047V28.9902H13.0719C13.0717 29.8114 13.0717 30.4464 13.0717 30.4526C12.996 32.9906 12.7834 35.0597 9.23038 35.1209C5.08719 35.1925 5.42512 30.6966 5.42512 28.7375" fill="white"></path>
+              <path fill-rule="evenodd" clip-rule="evenodd" id="logo-text-2" d="M220.226 19.6466C220.508 14.8843 217.55 12.4864 212.725 12.4864C208.428 12.4864 205.364 15.2222 205.364 19.4102C205.364 21.9096 206.005 23.925 208.498 25.1519C209.912 25.8479 212.23 26.5782 213.675 27.1106C216.349 28.0956 217.972 28.1241 217.972 31.9745C217.972 34.9467 215.894 36.3987 212.936 36.3987C208.534 36.3987 207.794 34.0345 207.935 30.2856H205.012C205.047 31.6365 205.008 33.6667 205.575 34.9128C207.083 38.224 210.189 38.9375 212.795 38.9375C217.867 38.9375 221.001 36.1286 221.001 31.3328C221.001 27.9888 220.084 26.3003 215.084 24.51C213.676 24.006 212.301 23.4957 210.893 22.9902C209.204 22.3835 208.393 21.3016 208.393 19.5454C208.393 17.5862 208.85 15.0193 213.112 15.0193C216.035 15.0193 217.515 17.0121 217.303 19.6466H220.226ZM177.758 38.3242V35.7909H167.404V26.4353H177.054V23.9024H167.404V15.5262H177.688V12.993H164.48V38.3242H177.758ZM146.642 15.5262H153.475V38.3242H156.398V15.5262H163.231V12.993H146.642V15.5262ZM146.097 19.6466C146.379 14.8843 143.421 12.4864 138.596 12.4864C134.299 12.4864 131.235 15.2222 131.235 19.4102C131.235 21.9096 131.876 23.925 134.369 25.1519C135.783 25.8479 138.101 26.5782 139.547 27.1106C142.22 28.0956 143.843 28.1241 143.843 31.9745C143.843 34.9467 141.765 36.3987 138.807 36.3987C134.405 36.3987 133.665 34.0345 133.806 30.2856H130.883C130.918 31.6365 130.878 33.6667 131.446 34.9128C132.954 38.224 136.06 38.9375 138.666 38.9375C143.738 38.9375 146.872 36.1286 146.872 31.3328C146.872 27.9888 145.955 26.3003 140.956 24.51C139.547 24.006 138.172 23.4957 136.764 22.9902C135.075 22.3835 134.264 21.3016 134.264 19.5454C134.264 17.5862 134.721 15.0193 138.983 15.0193C141.906 15.0193 143.386 17.0121 143.174 19.6466H146.097ZM115.686 12.993H112.446L120.37 28.4957V38.3242H123.293V28.4957L131.288 12.993H128.048L121.849 25.6924L115.686 12.993ZM112.746 19.6466C113.028 14.8843 110.069 12.4864 105.244 12.4864C100.947 12.4864 97.8832 15.2222 97.8832 19.4102C97.8832 21.9096 98.525 23.925 101.018 25.1519C102.432 25.8479 104.75 26.5782 106.195 27.1106C108.868 28.0956 110.492 28.1241 110.492 31.9745C110.492 34.9467 108.414 36.3987 105.456 36.3987C101.053 36.3987 100.313 34.0345 100.454 30.2856H97.5312C97.5664 31.6365 97.5275 33.6667 98.0946 34.9128C99.6026 38.224 102.708 38.9375 105.314 38.9375C110.386 38.9375 113.521 36.1286 113.521 31.3328C113.521 27.9888 112.604 26.3003 107.604 24.51C106.196 24.006 104.821 23.4957 103.413 22.9902C101.723 22.3835 100.912 21.3016 100.912 19.5454C100.912 17.5862 101.37 15.0193 105.632 15.0193C108.555 15.0193 110.034 17.0121 109.823 19.6466H112.746ZM199.525 38.3242H202.448V12.993H197.522L191.323 25.6924L185.159 12.993H180.233V38.3242H183.156V15.4131L189.791 28.3932H192.82L199.525 15.3917" fill="white"></path>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M78.8776 -0.000385284C73.4543 14.7259 68.618 18.1614 65.7825 22.949C64.0812 25.8223 63.0859 28.1305 63.0859 31.3396C63.0859 39.359 68.0508 44.621 73.363 46.5508C70.1069 41.9689 70.3307 36.3452 72.0519 32.4375C76.3894 22.59 86.1906 19.9072 83.2021 10.1818C82.8923 9.17407 82.2131 7.91757 81.8242 7.08239C80.7485 4.77326 79.8828 2.75362 78.8776 -0.000385284Z" fill="#009BDA"></path>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M73.5457 46.6839C75.2003 47.2504 76.9803 47.5547 78.8346 47.5547C87.6712 47.5547 94.6014 40.4354 94.6014 31.7865C94.6014 28.8354 93.8496 26.0609 92.3567 23.62C90.1343 19.9865 85.9497 15.2613 83.5128 10.5007C89.2869 29.2814 71.678 33.047 73.5457 46.6839Z" fill="#F6F54D"></path>
+            </svg></a>
+          <nav class="header__nav desktop">
+            <ul class="header__list">
+              <li class="header__item">
+                <button class="header__link" href="#" data-header-menu="decision" data-hover-link=""> 
+                  <p class="hover-line">Решения</p>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M13 5V4H11V5V10V11H10H5H4V13H5H10H11V14V19V20H13V19V14V13H14H19H20V11H19H14H13V10V5ZM13 11V13H11V11H13Z" fill="#474E5A"></path>
+                  </svg>
+                </button>
+              </li>
+              <li class="header__item">
+                <button class="header__link" href="#" data-header-menu="equipments" data-hover-link=""> 
+                  <p class="hover-line">Оборудование</p>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M13 5V4H11V5V10V11H10H5H4V13H5H10H11V14V19V20H13V19V14V13H14H19H20V11H19H14H13V10V5ZM13 11V13H11V11H13Z" fill="#474E5A"></path>
+                  </svg>
+                </button>
+              </li>
+              <li class="header__item">
+                <button class="header__link" href="#" data-header-menu="about" data-hover-link=""> 
+                  <p class="hover-line">О компании</p>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M13 5V4H11V5V10V11H10H5H4V13H5H10H11V14V19V20H13V19V14V13H14H19H20V11H19H14H13V10V5ZM13 11V13H11V11H13Z" fill="#474E5A"></path>
+                  </svg>
+                </button>
+              </li>
+              <li class="header__item"><a class="header__link" href="./ui" data-hover-link=""> 
+                  <p class="hover-line">Контакты</p></a></li>
+              <li class="header__item"><a class="header__link" href="#" data-hover-link=""> 
+                  <p class="hover-line">Опросные листы</p></a></li>
+            </ul>
+          </nav>
+          <div class="header__right desktop"> <a class="header__phone hover-line" href="tel:+74957879977">+7 495 787-99-77</a>
+            <div class="header__language"> <a class="header__language-link hover-line active" href="#">RU</a><span>/</span><a class="header__language-link hover-line" href="#">EN</a></div>
+          </div>
+          <div class="header__burger devices" data-burger="">  
+            <div class="burger"><span> </span><span> </span><span class="burger__end"></span></div>
+          </div>
+        </div>
+        <div class="header-menu" id="header-menu">
+          <div class="overlay" id="header-overlay"></div>
+          <div class="header-menu__block" data-header-block="decision"> 
+            <div class="header-menu-links">
+              <div class="header-menu-links__inner"> 
+                <nav class="header-menu-links__nav"> 
+                  <ul>
+                    <li> <a class="text-20 hover-line" href="#" data-hover-link="">Подготовка газов</a></li>
+                    <li> <a class="text-20 hover-line" href="#" data-hover-link="">Измерение расхода</a></li>
+                    <li> <a class="text-20 hover-line" href="#" data-hover-link="">Водоподготовка</a></li>
+                    <li> <a class="text-20 hover-line" href="#" data-hover-link="">Теплоснабжение</a></li>
+                    <li> <a class="text-20 hover-line" href="#" data-hover-link="">Модернизация и ремонт оборудования</a></li>
+                    <li> <a class="text-20 hover-line" href="#" data-hover-link="">Повышение эффективности</a></li>
+                    <li> <a class="text-20 hover-line" href="#" data-hover-link="">Ветроэнергетика</a></li>
+                    <li> <a class="text-20 hover-line" href="#" data-hover-link="">Сервисное обслуживание</a></li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+          <div class="header-menu__block" data-header-block="equipments">
+            <div class="header-equipments">
+              <div class="header-equipments__inner"> 
+                <div class="header-equipments__left">
+                  <nav class="header-equipments__nav" data-hover-color="">
+                    <ul>
+                      <li> <a class="text-20 hover-line" data-equipments-button="1" data-hover-link="">Оборудование для подготовки газов</a>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12" fill="none">
+                          <path d="M2.33203 1.83398L6.4987 6.00065L2.33203 10.1673" stroke="#474E5A" stroke-width="2" stroke-linecap="square"></path>
+                        </svg>
+                      </li>
+                      <li> <a class="text-20 hover-line" data-equipments-button="2" data-hover-link="">Дожимные компрессорные станции</a>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12" fill="none">
+                          <path d="M2.33203 1.83398L6.4987 6.00065L2.33203 10.1673" stroke="#474E5A" stroke-width="2" stroke-linecap="square"></path>
+                        </svg>
+                      </li>
+                      <li data-equipments-button="other"> <a class="text-20 hover-line" data-hover-link="">Узлы учета расхода газа</a></li>
+                      <li data-equipments-button="other"> <a class="text-20 hover-line" data-hover-link="">Паровые и водогрейные котельные</a></li>
+                      <li data-equipments-button="other"> <a class="text-20 hover-line" data-hover-link="">Конденсационные теплоутилизаторы</a></li>
+                      <li data-equipments-button="other"> <a class="text-20 hover-line" data-hover-link="">Тепловые насосы</a></li>
+                    </ul>
+                  </nav>
+                </div>
+                <div class="header-equipments__right" data-hover-color="">
+                  <div class="header-equipments__block" data-equipments-block="1">
+                    <nav>
+                      <ul> 
+                        <li> <a class="text-20 hover-line" data-hover-link="">Дожимные компрессорные станции на базе винтовых компрессоров</a></li>
+                        <li> <a class="text-20 hover-line" data-hover-link="">Дожимные компрессорные станции на базе поршневых компрессоров</a></li>
+                        <li> <a class="text-20 hover-line" data-hover-link="">Дожимные компрессорные станции на базе центробежных компрессоров</a></li>
+                        <li> <a class="text-20 hover-line" data-hover-link="">Сравнение типов компрессоров</a></li>
+                      </ul>
+                    </nav>
+                  </div>
+                  <div class="header-equipments__block" data-equipments-block="2">
+                    <nav>
+                      <ul> 
+                        <li> <a class="text-20 hover-line" data-hover-link="">Узлы учета расхода газа</a></li>
+                        <li> <a class="text-20 hover-line" data-hover-link="">Паровые и водогрейные котельные</a></li>
+                        <li> <a class="text-20 hover-line" data-hover-link="">Конденсационные теплоутилизаторы</a></li>
+                        <li> <a class="text-20 hover-line" data-hover-link="">Тепловые насосы</a></li>
+                      </ul>
+                    </nav>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="header-menu__block header-menu__block_about" data-header-block="about"> 
+            <div class="header-menu-links">
+              <div class="header-menu-links__inner"> 
+                <nav class="header-menu-links__nav"> 
+                  <ul>
+                    <li> <a class="text-20 hover-line" href="#" data-hover-link="">О компании</a></li>
+                    <li> <a class="text-20 hover-line" href="#" data-hover-link="">Реализованные проекты</a></li>
+                    <li> <a class="text-20 hover-line" href="#" data-hover-link="">Документы</a></li>
+                    <li> <a class="text-20 hover-line" href="#" data-hover-link="">Контакты</a></li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="menu-mobile">
+          <div class="menu-mobile__inner">
+            <div class="menu-mobile__box">
+              <div class="menu-mobile__page --active" data-mobile-page="home">
+                <nav>
+                  <ul>
+                    <li data-mobile-link="decision">Решения
+                      <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12" fill="none">
+                        <path d="M2.33203 1.83398L6.4987 6.00065L2.33203 10.1673" stroke="#474E5A" stroke-width="2" stroke-linecap="square"></path>
+                      </svg>
+                    </li>
+                    <li data-mobile-link="equipments">Оборудование
+                      <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12" fill="none">
+                        <path d="M2.33203 1.83398L6.4987 6.00065L2.33203 10.1673" stroke="#474E5A" stroke-width="2" stroke-linecap="square"></path>
+                      </svg>
+                    </li>
+                    <li data-mobile-link="about">О компании
+                      <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12" fill="none">
+                        <path d="M2.33203 1.83398L6.4987 6.00065L2.33203 10.1673" stroke="#474E5A" stroke-width="2" stroke-linecap="square"></path>
+                      </svg>
+                    </li>
+                    <li>Контакты
+                    </li>
+                    <li>Опросные листы
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="menu-mobile__page" data-mobile-page="decision">
+                <div class="menu-mobile__back">
+                  <button data-mobile-back="" data-mobile-link="home"> 
+                    <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12" fill="none">
+                      <path d="M2.33203 1.83398L6.4987 6.00065L2.33203 10.1673" stroke="#474E5A" stroke-width="2" stroke-linecap="square"></path>
+                    </svg>Решения
+                  </button>
+                </div>
+                <nav>
+                  <ul>
+                    <li class="p-0">
+                      <div class="accordion-ui accordion-ui_menu" data-accordion="data-accordion">
+                        <div class="accordion-ui__item">
+                          <div class="accordion-ui__header" data-accordion-header="data-accordion-header">
+                            <p class="title-32">Оборудование для подготовки газов</p>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M14.166 8.33206L9.99935 12.4987L5.83268 8.33206" stroke="#474E5A" stroke-width="2" stroke-linecap="square"></path>
+                            </svg>
+                          </div>
+                          <div class="accordion-ui__content" data-accordion-content="data-accordion-content">
+                            <div class="accordion__list"><a href="#">Дожимные компрессорные станции на базе винтовых компрессоров</a><a href="#">Дожимные компрессорные станции на базе поршневых компрессоров</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="p-0">
+                      <div class="accordion-ui accordion-ui_menu" data-accordion="data-accordion">
+                        <div class="accordion-ui__item">
+                          <div class="accordion-ui__header" data-accordion-header="data-accordion-header">
+                            <p class="title-32">Дожимные компрессорные станции</p>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M14.166 8.33206L9.99935 12.4987L5.83268 8.33206" stroke="#474E5A" stroke-width="2" stroke-linecap="square"></path>
+                            </svg>
+                          </div>
+                          <div class="accordion-ui__content" data-accordion-content="data-accordion-content">
+                            <div class="accordion__list"><a href="#">Дожимные компрессорные станции на базе винтовых компрессоров</a><a href="#">Дожимные компрессорные станции на базе винтовых компрессоров</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="p-0">
+                      <div class="accordion-ui accordion-ui_menu" data-accordion="data-accordion">
+                        <div class="accordion-ui__item">
+                          <div class="accordion-ui__header" data-accordion-header="data-accordion-header">
+                            <p class="title-32">Дожимные компрессорные станции</p>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M14.166 8.33206L9.99935 12.4987L5.83268 8.33206" stroke="#474E5A" stroke-width="2" stroke-linecap="square"></path>
+                            </svg>
+                          </div>
+                          <div class="accordion-ui__content" data-accordion-content="data-accordion-content">
+                            <div class="accordion__list"><a href="#">Дожимные компрессорные станции на базе винтовых компрессоров</a><a href="#">Дожимные компрессорные станции на базе винтовых компрессоров</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li><a href="#">Ссылка</a></li>
+                    <li><a href="#">Ссылка</a></li>
+                    <li><a href="#">Ссылка</a></li>
+                    <li><a href="#">Ссылка</a></li>
+                    <li><a href="#">Ссылка</a></li>
+                    <li><a href="#">Ссылка</a></li>
+                    <li><a href="#">Ссылка</a></li>
+                    <li><a href="#">Ссылка</a></li>
+                    <li><a href="#">Ссылка</a></li>
+                    <li><a href="#">Ссылка</a></li>
+                    <li><a href="#">Ссылка</a></li>
+                    <li><a href="#">Ссылка</a></li>
+                    <li><a href="#">Ссылка</a></li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="menu-mobile__page" data-mobile-page="equipments">
+                <div class="menu-mobile__back">
+                  <button data-mobile-back="" data-mobile-link="home"> 
+                    <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12" fill="none">
+                      <path d="M2.33203 1.83398L6.4987 6.00065L2.33203 10.1673" stroke="#474E5A" stroke-width="2" stroke-linecap="square"></path>
+                    </svg>Оборудование
+                  </button>
+                </div>
+                <nav>
+                  <ul>
+                    <li class="p-0">
+                      <div class="accordion-ui accordion-ui_menu" data-accordion="data-accordion">
+                        <div class="accordion-ui__item">
+                          <div class="accordion-ui__header" data-accordion-header="data-accordion-header">
+                            <p class="title-32">Оборудование для подготовки газов</p>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M14.166 8.33206L9.99935 12.4987L5.83268 8.33206" stroke="#474E5A" stroke-width="2" stroke-linecap="square"></path>
+                            </svg>
+                          </div>
+                          <div class="accordion-ui__content" data-accordion-content="data-accordion-content">
+                            <div class="accordion__list"><a href="#">Дожимные компрессорные станции на базе винтовых компрессоров</a><a href="#">Дожимные компрессорные станции на базе поршневых компрессоров</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="p-0">
+                      <div class="accordion-ui accordion-ui_menu" data-accordion="data-accordion">
+                        <div class="accordion-ui__item">
+                          <div class="accordion-ui__header" data-accordion-header="data-accordion-header">
+                            <p class="title-32">Дожимные компрессорные станции</p>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M14.166 8.33206L9.99935 12.4987L5.83268 8.33206" stroke="#474E5A" stroke-width="2" stroke-linecap="square"></path>
+                            </svg>
+                          </div>
+                          <div class="accordion-ui__content" data-accordion-content="data-accordion-content">
+                            <div class="accordion__list"><a href="#">Дожимные компрессорные станции на базе винтовых компрессоров</a><a href="#">Дожимные компрессорные станции на базе винтовых компрессоров</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="p-0">
+                      <div class="accordion-ui accordion-ui_menu" data-accordion="data-accordion">
+                        <div class="accordion-ui__item">
+                          <div class="accordion-ui__header" data-accordion-header="data-accordion-header">
+                            <p class="title-32">Дожимные компрессорные станции</p>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M14.166 8.33206L9.99935 12.4987L5.83268 8.33206" stroke="#474E5A" stroke-width="2" stroke-linecap="square"></path>
+                            </svg>
+                          </div>
+                          <div class="accordion-ui__content" data-accordion-content="data-accordion-content">
+                            <div class="accordion__list"><a href="#">Дожимные компрессорные станции на базе винтовых компрессоров</a><a href="#">Дожимные компрессорные станции на базе винтовых компрессоров</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li><a href="#">Ссылка</a></li>
+                    <li><a href="#">Ссылка</a></li>
+                    <li><a href="#">Ссылка</a></li>
+                    <li><a href="#">Ссылка</a></li>
+                    <li><a href="#">Ссылка</a></li>
+                    <li><a href="#">Ссылка</a></li>
+                    <li><a href="#">Ссылка</a></li>
+                    <li><a href="#">Ссылка</a></li>
+                    <li><a href="#">Ссылка</a></li>
+                    <li><a href="#">Ссылка</a></li>
+                    <li><a href="#">Ссылка</a></li>
+                    <li><a href="#">Ссылка</a></li>
+                    <li><a href="#">Ссылка</a></li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+            <div class="menu-mobile__footer"> 
+              <div class="header__language"> <a class="header__language-link hover-line active" href="#">RU</a><span> / </span><a class="header__language-link hover-line" href="#">EN</a></div><a class="header__phone hover-line" href="tel:+74957879977">+7 495 787-99-77</a>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="modal-block">
+      </div>
+      <div class="content" data-barba="container" data-barba-namespace="sro-iso">
+        <main class="white-bg">
+          <div class="documents">
+            <div class="documents__breadcrumbs">
+              <div class="breadcrumbs"><a href="/main">Главная</a><span class="breadcrumbs__separator"> </span><a href="/about">О компании</a><span class="breadcrumbs__separator"> </span><a href="/questionnaires">Документы</a><span class="breadcrumbs__separator"> </span>
+                <p>СРО и ISO</p>
+              </div>
+            </div>
+            <div class="documents__title"> 
+              <h1 class="title-104">Документы</h1>
+            </div>
+            <div class="documents__tabs"> <a class="button-square button-square_dark active active" href="/">Опросные листы</a><a class="button-square button-square_dark" href="/">СРО и ISO</a>
+            </div>
+            <div class="documents__inner">
+              <div class="documents__box"> 
+                <div class="documents__block documents__block_40">
+                  <h2 class="title-64">Сертификат ISO и допуск CPO</h2>
+                  <div class="documents__documents"> <a class="document-ui" href="#" download="">
+                      <div class="document-ui__inner"> 
+                        <div class="document-ui__title">
+                          <p class="title-32">CPO</p>
+                        </div>
+                        <div class="document-ui__content"> 
+                          <div class="document-ui__content-left">
+                            <p>DOCX</p>
+                            <p>406 КБ</p>
+                          </div>
+                          <div class="document-ui__content-right">
+                            <div class="button-download"> 
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M18.1399 10.429L12.0699 16.499L5.99989 10.429" stroke="#474E5A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"></path>
+                                <path d="M12.1653 3L12.1653 11.5" stroke="#474E5A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square" stroke-linejoin="round"></path>
+                                <path d="M1 23H23" stroke="#474E5A" stroke-width="2"></path>
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
+                      </div></a><a class="document-ui" href="#" download="">
+                      <div class="document-ui__inner"> 
+                        <div class="document-ui__title">
+                          <p class="title-32">iso</p>
+                        </div>
+                        <div class="document-ui__content"> 
+                          <div class="document-ui__content-left">
+                            <p>DOCX</p>
+                            <p>406 КБ</p>
+                          </div>
+                          <div class="document-ui__content-right">
+                            <div class="button-download"> 
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M18.1399 10.429L12.0699 16.499L5.99989 10.429" stroke="#474E5A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"></path>
+                                <path d="M12.1653 3L12.1653 11.5" stroke="#474E5A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square" stroke-linejoin="round"></path>
+                                <path d="M1 23H23" stroke="#474E5A" stroke-width="2"></path>
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
+                      </div></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="about-bottom"><a class="about-bottom-inner" href="#">
+              <h2 class="title-104">контакты</h2>
+              <div class="button-ui">
+                <p>далее</p>
+                <div class="button-ui__arrow"> 
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M12.4297 5.93005L18.4997 12.0001L12.4297 18.0701" stroke="#474E5A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"></path>
+                    <path d="M5 12L13.5 12" stroke="#474E5A" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square" stroke-linejoin="round"></path>
+                  </svg>
+                </div>
+              </div></a></div>
+        </main>
+      </div>
+      <footer class="footer">
+        <div class="footer__inner"> 
+          <div class="footer__box">
+            <div class="footer__left"><a class="footer__logo" href="/">
+                <svg xmlns="http://www.w3.org/2000/svg" width="221" height="55" viewBox="0 0 221 55" fill="none">
+                  <path fill-rule="evenodd" clip-rule="evenodd" id="logo-text-1" d="M58.4608 20.6938C58.4233 18.1944 58.6492 12.3849 50.2472 12.3849C44.6712 12.3849 41.9585 14.7493 41.9585 19.0725C41.9585 20.4234 42.4 21.8394 43.3146 22.9565C45.4143 25.5209 48.853 26.9195 51.6413 28.7995C52.9605 29.6891 53.7513 30.6569 53.7513 32.1433C53.7513 34.0685 52.6964 35.1155 50.4734 35.1155C47.8738 35.1155 47.1576 33.3273 47.1576 30.8597V29.3735H41.883V31.2312C41.883 35.7561 44.1438 38.9375 50.4734 38.9375C55.6351 38.9375 59.1768 36.4325 59.1768 31.6365C59.1768 29.4414 58.6129 27.9192 56.8031 26.334C55.3363 25.0491 52.1283 23.162 50.3981 22.1797C48.7384 21.2376 47.384 20.4908 47.384 18.5657C47.384 16.8432 48.5144 16.2015 50.285 16.2015C53.186 16.2015 53.4121 18.4306 53.3746 20.6938H58.4608ZM25.674 38.3241L27.0681 31.9066H33.247L34.641 38.3241H40.2926L33.8876 12.993H26.7666L20.0226 38.3241H25.674ZM29.4795 20.9976C29.7393 19.8148 29.8806 18.669 30.007 17.4849C30.0677 16.9134 30.1201 16.3367 30.195 15.7963H30.2705C30.3458 16.3367 30.3981 16.9134 30.4591 17.4849C30.5852 18.669 30.7504 19.8118 30.9866 20.9976L32.4182 28.1917H27.897L29.4795 20.9976ZM5.42544 22.5849C5.42544 20.6262 5.08751 16.1297 9.23069 16.2015C12.812 16.2638 12.9984 18.3631 13.0737 20.93H18.3484C18.3106 19.9169 18.3589 18.8667 18.0847 17.8565C16.8908 13.464 13.7502 12.3959 9.23069 12.3849C0.792267 12.3645 0 16.7489 0 23.2V28.1217C0 34.5729 0.793099 38.9535 9.23069 38.9375C18.2797 38.9205 18.3512 35.0397 18.3458 29.7726C18.3458 29.7514 18.3473 25.3059 18.3481 25.2821H9.45047V28.9902H13.0719C13.0717 29.8114 13.0717 30.4464 13.0717 30.4526C12.996 32.9906 12.7834 35.0597 9.23038 35.1209C5.08719 35.1925 5.42512 30.6966 5.42512 28.7375" fill="white"></path>
+                  <path fill-rule="evenodd" clip-rule="evenodd" id="logo-text-2" d="M220.226 19.6466C220.508 14.8843 217.55 12.4864 212.725 12.4864C208.428 12.4864 205.364 15.2222 205.364 19.4102C205.364 21.9096 206.005 23.925 208.498 25.1519C209.912 25.8479 212.23 26.5782 213.675 27.1106C216.349 28.0956 217.972 28.1241 217.972 31.9745C217.972 34.9467 215.894 36.3987 212.936 36.3987C208.534 36.3987 207.794 34.0345 207.935 30.2856H205.012C205.047 31.6365 205.008 33.6667 205.575 34.9128C207.083 38.224 210.189 38.9375 212.795 38.9375C217.867 38.9375 221.001 36.1286 221.001 31.3328C221.001 27.9888 220.084 26.3003 215.084 24.51C213.676 24.006 212.301 23.4957 210.893 22.9902C209.204 22.3835 208.393 21.3016 208.393 19.5454C208.393 17.5862 208.85 15.0193 213.112 15.0193C216.035 15.0193 217.515 17.0121 217.303 19.6466H220.226ZM177.758 38.3242V35.7909H167.404V26.4353H177.054V23.9024H167.404V15.5262H177.688V12.993H164.48V38.3242H177.758ZM146.642 15.5262H153.475V38.3242H156.398V15.5262H163.231V12.993H146.642V15.5262ZM146.097 19.6466C146.379 14.8843 143.421 12.4864 138.596 12.4864C134.299 12.4864 131.235 15.2222 131.235 19.4102C131.235 21.9096 131.876 23.925 134.369 25.1519C135.783 25.8479 138.101 26.5782 139.547 27.1106C142.22 28.0956 143.843 28.1241 143.843 31.9745C143.843 34.9467 141.765 36.3987 138.807 36.3987C134.405 36.3987 133.665 34.0345 133.806 30.2856H130.883C130.918 31.6365 130.878 33.6667 131.446 34.9128C132.954 38.224 136.06 38.9375 138.666 38.9375C143.738 38.9375 146.872 36.1286 146.872 31.3328C146.872 27.9888 145.955 26.3003 140.956 24.51C139.547 24.006 138.172 23.4957 136.764 22.9902C135.075 22.3835 134.264 21.3016 134.264 19.5454C134.264 17.5862 134.721 15.0193 138.983 15.0193C141.906 15.0193 143.386 17.0121 143.174 19.6466H146.097ZM115.686 12.993H112.446L120.37 28.4957V38.3242H123.293V28.4957L131.288 12.993H128.048L121.849 25.6924L115.686 12.993ZM112.746 19.6466C113.028 14.8843 110.069 12.4864 105.244 12.4864C100.947 12.4864 97.8832 15.2222 97.8832 19.4102C97.8832 21.9096 98.525 23.925 101.018 25.1519C102.432 25.8479 104.75 26.5782 106.195 27.1106C108.868 28.0956 110.492 28.1241 110.492 31.9745C110.492 34.9467 108.414 36.3987 105.456 36.3987C101.053 36.3987 100.313 34.0345 100.454 30.2856H97.5312C97.5664 31.6365 97.5275 33.6667 98.0946 34.9128C99.6026 38.224 102.708 38.9375 105.314 38.9375C110.386 38.9375 113.521 36.1286 113.521 31.3328C113.521 27.9888 112.604 26.3003 107.604 24.51C106.196 24.006 104.821 23.4957 103.413 22.9902C101.723 22.3835 100.912 21.3016 100.912 19.5454C100.912 17.5862 101.37 15.0193 105.632 15.0193C108.555 15.0193 110.034 17.0121 109.823 19.6466H112.746ZM199.525 38.3242H202.448V12.993H197.522L191.323 25.6924L185.159 12.993H180.233V38.3242H183.156V15.4131L189.791 28.3932H192.82L199.525 15.3917" fill="white"></path>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M78.8776 -0.000385284C73.4543 14.7259 68.618 18.1614 65.7825 22.949C64.0812 25.8223 63.0859 28.1305 63.0859 31.3396C63.0859 39.359 68.0508 44.621 73.363 46.5508C70.1069 41.9689 70.3307 36.3452 72.0519 32.4375C76.3894 22.59 86.1906 19.9072 83.2021 10.1818C82.8923 9.17407 82.2131 7.91757 81.8242 7.08239C80.7485 4.77326 79.8828 2.75362 78.8776 -0.000385284Z" fill="#009BDA"></path>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M73.5457 46.6839C75.2003 47.2504 76.9803 47.5547 78.8346 47.5547C87.6712 47.5547 94.6014 40.4354 94.6014 31.7865C94.6014 28.8354 93.8496 26.0609 92.3567 23.62C90.1343 19.9865 85.9497 15.2613 83.5128 10.5007C89.2869 29.2814 71.678 33.047 73.5457 46.6839Z" fill="#F6F54D"></path>
+                </svg></a>
+              <div class="footer__block devices"><a class="footer__phone hover-line" href="tel:+74957879977">+7 495 787-99-77</a><a class="footer__mail hover-line" href="mailto:info@gassystems.ru">info@gassystems.ru</a></div>
+            </div>
+            <div class="footer__right"> 
+              <nav class="footer__nav"> 
+                <p class="footer__title description">Решения</p>
+                <ul> 
+                  <li> <a class="hover-line text-20" href="#">Подготовка газов</a></li>
+                  <li> <a class="hover-line text-20" href="#">Измерение расхода</a></li>
+                  <li> <a class="hover-line text-20" href="#">Водоподготовка</a></li>
+                  <li> <a class="hover-line text-20" href="#">Теплоснабжение</a></li>
+                  <li> <a class="hover-line text-20" href="#">Модернизация и ремонт оборудования</a></li>
+                  <li> <a class="hover-line text-20" href="#">Повышение эффективности</a></li>
+                  <li> <a class="hover-line text-20" href="#">Ветроэнергетика</a></li>
+                  <li> <a class="hover-line text-20" href="#">Сервисное обслуживание</a></li>
+                </ul>
+              </nav>
+              <nav class="footer__nav"> 
+                <p class="footer__title description">Оборудование</p>
+                <ul> 
+                  <li> <a class="hover-line text-20" href="#">Оборудование для подготовки газов</a></li>
+                  <li> <a class="hover-line text-20" href="#">Дожимные компрессорные станции</a></li>
+                  <li> <a class="hover-line text-20" href="#">Узлы учета расхода газа</a></li>
+                  <li> <a class="hover-line text-20" href="#">Паровые и водогрейные котельные</a></li>
+                  <li> <a class="hover-line text-20" href="#">Конденсационные теплоутилизаторы</a></li>
+                  <li> <a class="hover-line text-20" href="#">Тепловые насосы</a></li>
+                </ul>
+              </nav>
+              <nav class="footer__nav"> 
+                <p class="footer__title description">О компании</p>
+                <ul> 
+                  <li> <a class="hover-line text-20" href="#">Газовые системы</a></li>
+                  <li> <a class="hover-line text-20" href="#">Реализованные проекты</a></li>
+                  <li> <a class="hover-line text-20" href="#">Документы</a></li>
+                  <li> <a class="hover-line text-20" href="#">Контакты</a></li>
+                </ul>
+              </nav>
+              <div class="footer__block desktop"> <a class="footer__phone hover-line w-max" href="tel:+74957879977"> +7 495 787-99-77</a><a class="footer__mail hover-line w-max" href="mailto:info@gassystems.ru"> info@gassystems.ru</a></div>
+            </div>
+          </div>
+          <div class="footer__row"> 
+            <p class="footer__name">©2024 АО «Газовые системы»</p><a class="footer__politic hover-line w-max" href="/">Политика конфиденциальности</a>
+            <p class="footer__claud">Сделано в <a href="/">
+                <svg xmlns="http://www.w3.org/2000/svg" width="92" height="10" viewBox="0 0 92 10" fill="none">
+                  <path d="M12.5163 1.15095C12.5163 3.79324 11.9711 5.674 10.8922 6.74418C10.0701 7.56052 9.17882 7.64418 8.83555 7.63841L8.26152 7.66148L6.7038 5.78938C7.22879 5.4115 7.5432 4.78843 7.84608 4.18266C7.94704 3.98362 8.04514 3.78747 8.15764 3.58844L10.0009 0.00288741H7.11057L6.0173 2.14902L5.80961 2.56152C5.55288 3.07498 5.16343 3.85381 4.9067 3.85381H2.74325V0.00288741H0V9.99512H2.74325V6.14418H3.70096L6.9519 9.99512H10.1278H10.2663C10.4538 9.99512 14.8355 9.9057 15.2336 2.29037H18.297V9.99512H21.0402V0H12.5192V1.15095H12.5163Z" fill="#474E5A"></path>
+                  <path d="M83.2172 1.15056C83.2172 7.51397 80.7711 7.71013 80.7451 7.71013L80.7451 7.72744L80.7451 10.0005H80.9643C81.1518 10.0005 85.5335 9.91107 85.9316 2.29574H88.9979V10.0005H91.7412V0.00537109H83.2201V1.15056H83.2172Z" fill="#474E5A"></path>
+                  <path d="M52.8375 0.00537109H44.0049V1.15056C44.0049 7.49955 41.3107 7.71013 41.2818 7.71013L40.9414 7.72744L41.4434 10.0005H53.9106V7.71013H52.8404V0.00537109H52.8375ZM50.0943 7.71013H45.1991C46.0385 6.38898 46.5202 4.57168 46.6414 2.29574H50.0943V7.71013Z" fill="#474E5A"></path>
+                  <path d="M61.6984 5.59283L59.6012 0.00537109H55.4272V9.99761H58.1705V3.53323L60.5935 9.99761H62.8002L65.2262 3.53323V9.99761H67.9695V0.00537109H63.7955L61.6984 5.59283Z" fill="#474E5A"></path>
+                  <path d="M72.484 5.6361V0.00537109H69.7407V9.99761H71.3619L76.9926 4.36688V9.99761H79.7359V0.00537109H78.1176L72.484 5.6361Z" fill="#474E5A"></path>
+                  <path d="M42.574 0.00537109H39.649L37.1683 6.7784L34.6472 0.00537109H31.6934L34.3645 7.00051H37.0875L36.1385 9.59377L35.9366 9.99761H38.8731L38.9423 9.80723C39.7356 7.64955 42.1471 1.08133 42.4183 0.39768L42.574 0.00537109Z" fill="#474E5A"></path>
+                  <path d="M29.5615 0.279411L29.4548 0.00537109H25.2145L21.7039 9.59377L21.502 9.99761H24.4385L25.0125 8.43704H29.6625L30.2365 9.99761H32.7057H33.173L32.9711 9.59377L29.5615 0.279411ZM27.3346 2.12555C27.6375 2.94189 28.0183 3.97169 28.425 5.07937H28.4221L28.8144 6.14667H25.8548L26.2471 5.07937H26.2442C26.6538 3.97169 27.0346 2.93901 27.3346 2.12555Z" fill="#474E5A"></path>
+                </svg></a></p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script src="https://api-maps.yandex.ru/2.0/?load=package.standard,package.geoObjects&amp;lang=ru-RU&amp;apikey=&lt;ваш API-ключ&gt;" type="text/javascript"></script>
+  </body>
+</html>
